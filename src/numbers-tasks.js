@@ -354,7 +354,7 @@ function numberToStringInBase(/* number, base */) {
  * 12345, 2    => '1.23e+4'
  */
 function toExponential(number, fractionDigits) {
-  const result = number.toPrecision(fractionDigits);
+  const result = number.toExponential(fractionDigits);
   return String(result);
 }
 
