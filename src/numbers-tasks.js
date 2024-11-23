@@ -355,7 +355,7 @@ function numberToStringInBase(/* number, base */) {
  */
 function toExponential(number, fractionDigits) {
   const result = number.toPrecision(fractionDigits);
-  return toString(result);
+  return String(result);
 }
 
 /**
@@ -371,7 +371,7 @@ function toExponential(number, fractionDigits) {
  */
 function toFixed(number, fractionDigits) {
   const result = number.toFixed(fractionDigits);
-  return toString(result);
+  return String(result);
 }
 
 /**
