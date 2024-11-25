@@ -466,9 +466,13 @@ function getFloatOnString(str) {
  * '1.234', 2           => 1
  * '10', 8              => 8
  */
-function getIntegerOnString(str, base) {
-  return parseInt(str, base);
-}
+/**
+ * Converts a string representation of a number into an integer of a specified base.
+ * @param {string} str - A string representing a number.
+ * @param {number} base - The base of the numeral system to be used for conversion.
+ * @returns {number} The integer result of parsing the input string as a number in the specified base.
+ */
+const getIntegerOnString = (str, base) => parseInt(str, base);
 
 /**
  * Returns whether a number is a safe integer.
@@ -481,8 +485,8 @@ function getIntegerOnString(str, base) {
  * 3.5      => false
  * 2 ** 53  => false
  */
-function isSafeInteger(/* number */) {
-  throw new Error('Not implemented');
+function isSafeInteger(number) {
+  return Number.isSafeInteger(number);
 }
 
 /**
