@@ -296,7 +296,11 @@ function getSumToN(n) {
  *   5   => 5  // 5
  */
 function getSumOfDigits(num) {
-  return (num % 10) + getSumOfDigits(Math.floor(num / 10));
+  let res = 0;
+  for (let i = 0; i <= num.length; i += 1) {
+    res += i;
+  }
+  return res;
 }
 
 /**
@@ -499,9 +503,7 @@ function isSafeInteger(number) {
  * 5.9  => 5
  * -5.1 => -6
  */
-function roundToSmallestInteger(/* number */) {
-  throw new Error('Not implemented');
-}
+const roundToSmallestInteger = (number) => Math.floor(number);
 
 /**
  * Returns the largest integer greater than or equal to a given number.
@@ -513,9 +515,7 @@ function roundToSmallestInteger(/* number */) {
  * 5.1  => 6
  * -5.9 => -5
  */
-function roundToLargestInteger(/* number */) {
-  throw new Error('Not implemented');
-}
+const roundToLargestInteger = (number) => Math.ceil(number);
 
 /**
  * Returns the value of a number rounded to the nearest integer.
